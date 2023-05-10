@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+  <div class="container">
+    <table class="table table-hover table-striped table-bordered mb-0">
+      <center>
+        <h1 class="merriweather text-center mb-4">Liste de vos article favories </h1>
+        <br/>
+      {% for article in InputListe %}
+        <tr>
+        <td><a href="{% url 'show-article' article.id %}">{{ article }}</a>
+          <br/>
+          <br/> 
+        </td>
+        <!-- <td align="right">
+          <a href="{% url 'update-car' article.id %}">update</a>
+        </td> -->
+        <div class="col-12">
+          <td align="right">
+            <a href="{% url 'update-car' article.id %}"><button type="submit" class="btn btn-primary ">update</button></a>
+          </td>
+        </div>
+      </tr>
+      {% endfor %}
+    </center>
+    </table>
+  </div>
+
+{% endblock container %}
+
+<!-- <div class="col-12">
+  <td align="right">
+    <a href="{% url 'update-car' article.id %}"><button type="submit" class="btn btn-primary ">update</button></a>
+  </td>
+</div> -->

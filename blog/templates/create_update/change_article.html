@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+      
+      <div class="container">
+      {% comment %} <div class="col-md-6"> {% endcomment %}
+    <h1 class="merriweather text-center mb-3">Modification de votre article favoris</h1>
+    <br/>
+    <form action="" method=POST>
+    {% csrf_token %}
+    {{form.as_p}}
+        <br/>
+
+        
+        <!-- <input type="submit" value="update" class="btn btn-secondary"> -->
+
+        <div class="col-12 mb-2">
+          <input type="submit" value="Update" class="btn btn-primary">
+          </input>
+        </div>
+    </form>
+
+  </div>
+
+
+{% endblock container %}

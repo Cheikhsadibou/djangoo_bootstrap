@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block container %}
+        <center>
+        <div class=" bg-dark">
+        <br>
+        <div class="card" style="width: 50rem;">
+        <div class="card-body text-light bg-dark">
+          <h1 class="card-title merriweather text-center mb-4">{{ articl }}</h1><br/>
+          {% if articl.miniature %}
+          <img src="{{ articl.miniature.url }}" class="card-img-top" alt="images"><br/>
+          {% endif %}
+          <p class="card-text">{{ articl.resume }}<br/></p>
+          <p class="card-text">{{ articl.contenu }}<br/></p>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">L'auteur : {{ articl.auteur }}<br/></li>
+          <li class="list-group-item">La date de creation : {{ articl.date_de_creation }}<br/></li>
+          <li class="list-group-item">La date mise à jour : {{ articl.date_mise_a_jour }}<br/></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </center>
+
+    {% endblock container %}

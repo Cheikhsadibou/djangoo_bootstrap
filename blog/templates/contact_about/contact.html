@@ -1,0 +1,83 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+        
+{% block container %}
+        <!-- Contact Start -->
+        <div class="contact bg-dark text-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="merriweather text-center text-light mb-4">Entrer en contact</h2>
+                    <h3 class="merriweather text-center text-light mb-3">Contact pour toute question</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <h2>Coordonnées rapides</h2>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-clock"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h3>Heure d'ouverture</h3>
+                                    <p>Lun - Vend, 8:00 - 21:00</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fa fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h3>Appelez-nous</h3>
+                                    <p>+221 78 223 50 87</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h3>Envoyez-nous un email</h3>
+                                    <p>cheikhdiouf035@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="contact-form">
+                            <div id="success"></div>
+                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="sendMessageButton">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.6750734983649!2d-17.326264934374233!3d14.72952902516499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec175125ac0b985%3A0xf77fd0d12250d5f!2sSICAP%20mbao!5e0!3m2!1sfr!2ssn!4v1681135501450!5m2!1sfr!2ssn" width="1010" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        
+        {% endblock container %}

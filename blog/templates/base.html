@@ -1,0 +1,199 @@
+<!doctype html>
+{% load static %}
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="shortcut icon" href="#">
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" >
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" >
+    <title>AL MAHDI SERVICE</title>
+  </head>
+  <body>
+     
+      <nav class="cs-navbar navbar navbar-expand-lg position-fixed navbar-dark w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" text-uppercase fw-bolder mx-4 my-3 href="#">AL MAHDI SERVICE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="{% url 'HomePage' %}">home</a>
+              </li> 
+              <li class="nav-item pe-4">
+                <a class="nav-link" href="{% url 'BlogPage' %}">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog Article
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item pe-4" href="{% url 'list_detail' %}">Détail article</a></li>
+                  <li><a class="dropdown-item pe-4" href="{% url 'Creer_Article' %}">Créér Article</a></li>
+                  <li><a class="dropdown-item pe-4" href="{% url 'liste-article' %}">Modifier Article</a></li>
+                </ul>
+              </li>
+            </li>
+               <li class="nav-item pe-4">
+                <a class="nav-link" href="{% url 'contact-us' %}">Contact</a>
+              </li></li>
+            </li>
+            <li class="nav-item pe-4">
+             <a class="nav-link" href="{% url 'about-us' %}">A Propos</a>
+              </li>
+              <li class="nav-item pe-4">
+                <a class="btn btn-order rounded-0" href="#">Passer une Résérvation</a>
+              </li>
+            </ul>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+        <section class="banner d-flex justify-content-center align-items-center pt-5">
+          <div class="container my-5 py-5">
+            <div class="row">
+              <div class="col-md-6"></div>
+              <div class="col-md-6">
+                <h1 class="text-capitalize py-3 redressed banner-desc">
+                  AL MAHDI SERVICE votre service garanties
+                  rendue au meilleur prix  
+                </h1>
+                <p>
+                  <button class="btn btn-order btn-lg me-5 rounded-0 merriweather">Reserver Maintenant</button>
+                  <button class="btn btn-outline-info btn-lg rounded-0 merriweather">Achetter</button>
+                </p> 
+              </div>  
+            </div>
+          </div>
+        </section>
+
+        <div>
+        {% block container %}
+
+        {% endblock container %}
+      </div>
+
+        <section class="order-form py-5">
+          <div class="container">
+            <h2 class="merriweather text-center text-light mb-4">Passer votre Reservation</h2>
+                <form>
+                  <div class="row">
+                      <div class="col-md-6 col-sm">
+                        <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-far fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="Votre Nom">
+                      </div>
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-utensils"></i></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Choisisser votre Marque</option>
+                          <option value="1">RENAULT</option>
+                          <option value="2">DODDGE</option>
+                          <option value="3">FERRARI</option>
+                          <option value="3">FERRARI</option>
+                          <option value="3">LAND ROVER</option>
+                        </select>
+                      </div>
+                      <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Enregistrer le montant" >
+                        <span class="input-group-text">0.00</span>
+                        <span class="input-group-text">FCFA</span>
+                      </div>                    
+                  </div>
+                    <div class="col-md-6 col-sm">
+                      <div class="input-group mb-3">
+                        <input type="Email" class="form-control" placeholder="Votre Email">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-far fa-at"></i></span>
+                      </div>
+                        <div class="input-group mb-3">
+                          <input type="number" class="form-control" placeholder="Votre Numero de Telephone">
+                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-fas fa-phone"></i></span>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input type="Adress" class="form-control" placeholder="Adress Zone EX:. DAKAR 24">
+                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-fas fa-home"></i></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Preciser Le Nombre de Jour</i></span>
+                        <input type="text" class="form-control" placeholder="EX:. 30 jours">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-text">Autre Information</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                    </div> 
+                  </div>
+                </form>
+            </h2>
+          </div>
+        </section>
+        
+        <section class="cs-banner py-4 py-md-5 bg-body_tertiary">
+          <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+            <div class="row">
+              {% comment %} <div class="col-md-6 col-lg-3 offset-lg-1 mb-3"> {% endcomment %}
+                <div class="col-lg-3 mb-3">
+                
+                <div class="footer-contact">
+                <h3><a href="#">Get In Touch</a></h3>
+                <p><i class="nav-link disabled text-light ">123 Street, Yoff Layenne, DAKAR</i></p>
+                <p><i class="nav-link disabled text-light">+221 78 223 50 87</i></p>
+                <p><i class="nav-link disabled text-light">cheikhdiouf035@gmail.com</i></p>
+                <div class="footer-social">
+                  <a class="btn text-light " href=""><i class="fab fa-twitter"></i></a>
+                  <a class="btn text-light " href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn text-light " href=""><i class="fab fa-youtube"></i></a>
+                  <a class="btn text-light " href=""><i class="fab fa-instagram"></i></a>
+                  <a class="btn text-light " href=""><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              
+            </div>
+            </div>
+            {% comment %} <div class="col-lg-3 offset-lg-1 mb-3"> {% endcomment %}
+              <div class="col-lg-3 mb-3">
+                <nav class="nav flex-column">
+                    <h3><a href="#"> Popular Links</a></h3>
+                    <p><a class="nav-link text-light" href="#">About Us</a></p>
+                    <p><a class="nav-link text-light" href="#">Contact Us</a></p>
+                    <p><a class="nav-link text-light" href="#">Our Service</a></p>
+                    <p><a class="nav-link text-light" href="#">Service Points</a></p>
+                    <p><a class="nav-link text-light" href="#">Pricing Plan</a></p>
+                </nav>
+            </div>
+            <div class="col-lg-3 mb-3">
+                <nav class="nav flex-column">
+                  <h3><a href="#">Useful Links</a></h3>
+                  <p><a class="nav-link text-light" href="#">Terms of use</a></p>
+                  <p><a class="nav-link text-light" href="#">Privacy policy</a></p>
+                  <p><a class="nav-link text-light" href="#">Cookies</a></p>
+                  <p><a class="nav-link text-light" href="#">Help</a></p>
+                  <p><a class="nav-link text-light" href="#">FQAs</a></p>
+                </nav>
+              </div>
+             
+            <div class="col-lg-3 mb-3">
+              <div class="footer-newsletter">
+                  <h3><a href="#">Newsletter</a></h3>
+                  <form>
+                      <input class="form-control mb-3" placeholder="Full Name">
+                      <input class="form-control mb-3" placeholder="Email">
+                      <button class="btn btn-primary">Submit</button>
+                  </form>
+               </div>
+             </div>
+            </div>
+          </div>
+          <div class="text-light container copyright">
+            <p>&copy; <a href="#">AL MAHDI SERVICE</a>, All Right Reserved. Designed By <a href="#">Cheikh Sadibou Diouf</a></p>
+        </div>
+        </section>
+      
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
